@@ -69,7 +69,7 @@ main{
     max-width: 50vh;
     background-color: #368F8B;
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     filter: drop-shadow(-11px 10px 4px rgba(0, 0, 0, 0.25));
@@ -81,21 +81,22 @@ margin-right: 8vw;
 margin-left: 8vw;
 }
 .wrapper-navigate{
+    width: 100%;
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .outer h3{
     color:white;
 }
 .inner{
-    height: 22.5vw;
+    height: 20vw;
     width: 20vw;
     max-height: 45vh;
     max-width: 40vh;
     background-color:white;
     filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
-    margin:1vw;
+    margin:2.5vw;
 }
 footer{
     display:flex;
