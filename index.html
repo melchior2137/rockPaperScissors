@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+
+
+    <title>Rock, Papers, Scissors</title>
+</head>
+
+<body>
+    <nav>
+        <h1>ROCK, PAPER, SCISSORS</h1>
+    </nav>
+    <main>
+        <div id="wrapper-1" class="wrapper">
+            <h2>YOU</h2>
+            <div id="outer-1" class="outer">
+                <div class="inner">
+                    <img></img>
+                </div>
+                <div class="wrapper-navigate"> 
+                    <span onclick="prevItem()" class="material-icons-outlined md-48">
+                    navigate_before
+                    </span>
+                    <h3 id="playerItem">PAPER</h3>
+                    <span onclick="nextItem()" class="material-icons-outlined md-48">
+                        navigate_next
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="wrapper-2" class="wrapper">
+            <h2>CPU</h2>
+            <div id="outer-2" class="outer">
+                <div class="inner">
+                    <img></img>
+                </div>
+                <h3 id="cpuItem">WAITING...</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button onclick="play(itemIndex)">
+            <h3>PLAY</h3>
+        </button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
