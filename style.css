@@ -1,12 +1,15 @@
+html{
+    box-sizing: border-box;
+    transition: all 0.1s ease-in;
+    height: 100vh;
+}
 body{
     margin:0;
     padding:0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     font-family: 'Rokkitt', serif;
     background-color: #F3DFC1;
-    box-sizing: border-box;
-    transition: all 0.1s ease-out;
 }
 
 .material-icons-outlined.md-48 { 
@@ -49,7 +52,7 @@ h3{
 
 
 nav{
-    height:150px;
+    height:10%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +63,7 @@ main{
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 80%;
 }
 .wrapper{
     display:flex;
@@ -109,6 +113,9 @@ footer{
     align-items: center;
     margin-top: 2.66vw;
     margin-bottom: 2.66vw;
+    height: 10%;
+    margin:0;
+    padding:0;
 }
 button{
     height: 5vw;
@@ -117,6 +124,7 @@ button{
     max-width: 40vh;
     background: #246A73;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom:5vh;
 }
 button:hover{
     background-color: white;

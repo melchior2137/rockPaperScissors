@@ -1,5 +1,5 @@
 let itemIndex = 1; // default Player item
-let bodyElement = document.querySelector("body");
+let bodyElement = document.querySelector("html");
 let computerScore=0;
 let playerScore=0;
 items = ["ROCK", "PAPER", "SCISSORS"]
