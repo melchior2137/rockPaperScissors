@@ -37,6 +37,17 @@ function nextItem() {
         duration: 50,
         iterations: 1
       });
+
+      document.getElementById("playerImage").animate([
+        // keyframes
+        { transform: 'translate(-50px)' },
+
+      ], {
+        // timing options
+        duration: 50,
+        iterations: 1
+      });
+
       setTimeout(function(){
       document.getElementById("playerItem").innerHTML = items[itemIndex];
       document.getElementById("playerImage").src = imgArray[itemIndex].src;
@@ -48,6 +59,15 @@ function prevItem() {
         itemIndex = 2;
     }
     document.getElementById("playerItem").animate([
+        // keyframes
+        { transform: 'translate(50px)' },
+      ], {
+        // timing options
+        duration: 50,
+        iterations: 1
+      });
+
+      document.getElementById("playerImage").animate([
         // keyframes
         { transform: 'translate(50px)' },
       ], {
@@ -71,6 +91,15 @@ function play(playerItem) {                     //main game function
         duration: 400,
         iterations: 1
       });
+
+      document.getElementById("cpuImage").animate([
+        // keyframes
+        { transform: 'rotate(360deg)' },
+      ], {
+        // timing options
+        duration: 400,
+        iterations: 1
+      });
       setTimeout(function(){
       document.getElementById("cpuItem").innerHTML = items[cpuIndex];
       document.getElementById("cpuImage").src = imgArray[cpuIndex].src;
@@ -81,7 +110,7 @@ function play(playerItem) {                     //main game function
     setTimeout(function(){
         if (cpuIndex == playerItem) {
         bodyElement.style.border = "25px solid #F4DD0F";
-        document.getElementById("score-info").innerHTML ="DRAW!";
+        document.getElementById("score-info").innerHTML ="YOU DRAW!";
         playerScore++;
         computerScore++;
     }
