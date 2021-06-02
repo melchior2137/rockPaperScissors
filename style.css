@@ -32,7 +32,11 @@ nav,main,.outer,.inner,footer,button{
     border:none;
 }
 
-
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
 
 h1{
     font-size:64px;
@@ -134,6 +138,10 @@ button:hover{
 }
 button h3:hover{
     color:#246A73;
+}
+
+.blinking{
+    animation: blink 1.5s infinite;
 }
 
 

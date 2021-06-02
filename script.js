@@ -17,15 +17,16 @@ function nextItem() {
     }
     document.getElementById("playerItem").animate([
         // keyframes
-        { transform: 'rotate(360deg)' },
+        { transform: 'translate(-50px)' },
+
       ], {
         // timing options
-        duration: 400,
+        duration: 50,
         iterations: 1
       });
       setTimeout(function(){
       document.getElementById("playerItem").innerHTML = items[itemIndex];
-      },300)
+      },50)
 }
 function prevItem() {
     itemIndex--;
@@ -34,19 +35,19 @@ function prevItem() {
     }
     document.getElementById("playerItem").animate([
         // keyframes
-        { transform: 'rotate(-360deg)' },
+        { transform: 'translate(50px)' },
       ], {
         // timing options
-        duration: 400,
+        duration: 50,
         iterations: 1
       });
       setTimeout(function(){
       document.getElementById("playerItem").innerHTML = items[itemIndex];
-      },300)
+      },50)
 }
 function play(playerItem) {                     //main game function
-    cpuIndex = cpuIndexGen(0, 3);
-
+    cpuIndex = cpuIndexGen(0, 3);               //random value from 0 to 2
+    document.getElementById("cpuItem").classList.remove("blinking"); //delete class with blinking animation
     document.getElementById("cpuItem").animate([
         // keyframes
         { transform: 'rotate(360deg)' },
@@ -58,7 +59,6 @@ function play(playerItem) {                     //main game function
       setTimeout(function(){
       document.getElementById("cpuItem").innerHTML = items[cpuIndex];
       },300)
-
 
     
     setTimeout(function(){
