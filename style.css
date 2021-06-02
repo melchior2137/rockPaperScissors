@@ -1,3 +1,20 @@
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+@keyframes movein {
+    0%{
+        color:#43B1AC;
+        margin-bottom: 50px;
+    }
+}
+
+
+
+
+
 html{
     box-sizing: border-box;
     transition: all 0.1s ease-in;
@@ -9,7 +26,7 @@ body{
     height: 100%;
     width: 100%;
     font-family: 'Rokkitt', serif;
-    background-color: #F3DFC1;
+    background-color: #43B1AC;
 }
 
 .material-icons-outlined.md-48 { 
@@ -26,34 +43,35 @@ h1,h2,h3{
     margin:0;
     padding:0;
     font-family: 'Rokkitt', serif;
+    color:white;
 }
 
 nav,main,.outer,.inner,footer,button{
     border:none;
 }
 
-@keyframes blink {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-  }
-
 h1{
     font-size:64px;
     font-weight: 400;
+    animation: movein 2s 1;
 }
 h2{
     font-size: 48px;
     font-weight: 400;
+    animation: movein 2s 1;
 }
 
 h3{
     font-size: 48px;
     font-weight: 700px;
-    color:white;
+    animation: movein 2s 1;
+
 }
 
-
+img{
+    width: 40%;
+    height: auto;  
+}
 
 nav{
     height:10%;
@@ -78,7 +96,7 @@ main{
     width: 25vw;
     max-height: 60vh;
     max-width: 50vh;
-    background-color: #368F8B;
+    background-color: #246A73;
     display:flex;
     justify-content: flex-start;
     align-items: center;
@@ -90,6 +108,11 @@ margin-right: 8vw;
 }
 #wrapper-2{
 margin-left: 8vw;
+}
+#score-wrapper{
+    display:flex;
+    flex-direction: column;
+    animation: movein 2s 1;
 }
 
 #score{
@@ -110,6 +133,9 @@ margin-left: 8vw;
     background-color:white;
     filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
     margin:2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer{
     display:flex;
@@ -139,6 +165,11 @@ button:hover{
 button h3:hover{
     color:#246A73;
 }
+button:active {
+    transform: translate(-4px,4px);
+    box-shadow: -6px 6px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.1s;
+  }
 
 .blinking{
     animation: blink 1.5s infinite;

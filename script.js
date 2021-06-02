@@ -1,10 +1,23 @@
 let itemIndex = 1; // default Player item
-let bodyElement = document.querySelector("html");
+let bodyElement = document.querySelector("html"); 
 let computerScore=0;
 let playerScore=0;
+
+//array of items
 items = ["ROCK", "PAPER", "SCISSORS"]
 
-//ZROBIC TABLICE OBRAZKOW
+//array of photos
+
+let imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = 'img/rock.png';
+
+imgArray[1] = new Image();
+imgArray[1].src = 'img/paper.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'img/scissors.png';
 
 function cpuIndexGen(min, max) {                                 // Random CPU Item Generator
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the     minimum is inclusive
@@ -26,6 +39,7 @@ function nextItem() {
       });
       setTimeout(function(){
       document.getElementById("playerItem").innerHTML = items[itemIndex];
+      document.getElementById("playerImage").src = imgArray[itemIndex].src;
       },50)
 }
 function prevItem() {
@@ -43,6 +57,7 @@ function prevItem() {
       });
       setTimeout(function(){
       document.getElementById("playerItem").innerHTML = items[itemIndex];
+      document.getElementById("playerImage").src = imgArray[itemIndex].src;
       },50)
 }
 function play(playerItem) {                     //main game function
@@ -58,12 +73,15 @@ function play(playerItem) {                     //main game function
       });
       setTimeout(function(){
       document.getElementById("cpuItem").innerHTML = items[cpuIndex];
-      },300)
+      document.getElementById("cpuImage").src = imgArray[cpuIndex].src;
+      },400)
+      
 
     
     setTimeout(function(){
         if (cpuIndex == playerItem) {
         bodyElement.style.border = "25px solid #F4DD0F";
+        document.getElementById("score-info").innerHTML ="DRAW!";
         playerScore++;
         computerScore++;
     }
@@ -72,10 +90,12 @@ function play(playerItem) {                     //main game function
             case 0:
                 if(playerItem==1){
                     bodyElement.style.border = "25px solid #44E179";
+                    document.getElementById("score-info").innerHTML ="YOU WON!";
                     playerScore++;
                 }
                 else{
                     bodyElement.style.border = "25px solid #E14444";
+                    document.getElementById("score-info").innerHTML ="YOU LOST!";
                     computerScore++;
 
                 }
@@ -83,11 +103,13 @@ function play(playerItem) {                     //main game function
             case 1:
                 if(playerItem==2){
                     bodyElement.style.border = "25px solid #44E179";
+                    document.getElementById("score-info").innerHTML ="YOU WON!";
                     playerScore++;
 
                 }
                 else{
                     bodyElement.style.border = "25px solid #E14444";
+                    document.getElementById("score-info").innerHTML ="YOU LOST!";
                     computerScore++;
 
                 }
@@ -95,11 +117,13 @@ function play(playerItem) {                     //main game function
             case 2:
                 if(playerItem==0){
                     bodyElement.style.border = "25px solid #44E179";
+                    document.getElementById("score-info").innerHTML ="YOU WON!";
                     playerScore++;
 
                 }
                 else{
                     bodyElement.style.border = "25px solid #E14444";
+                    document.getElementById("score-info").innerHTML ="YOU LOST!";
                     computerScore++;
                 }
                 break;
