@@ -7,16 +7,15 @@
 @keyframes movein {
     0%{
         color:#43B1AC;
-        margin-bottom: 50px;
+        margin-bottom: 50px;    
     }
 }
 
 
 
-
-
 html{
     box-sizing: border-box;
+    outline:none;
     transition: all 0.1s ease-in;
     height: 100vh;
 }

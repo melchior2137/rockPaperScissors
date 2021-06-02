@@ -159,7 +159,7 @@ function play(playerItem) {                     //main game function
         }
     }
     document.getElementById("score").innerHTML = playerScore + " : " + computerScore;
-},500)
+},400)
 };
 
 
