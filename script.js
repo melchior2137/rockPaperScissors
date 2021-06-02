@@ -117,7 +117,7 @@ function play(playerItem) {                     //main game function
     
     setTimeout(function(){
         if (cpuIndex == playerItem) {
-        bodyElement.style.border = "25px solid #F4DD0F";
+        bodyElement.style.border = "1.5vw solid #F4DD0F";
         document.getElementById("score-info").innerHTML ="YOU DRAW!";
         playerScore++;
         computerScore++;
@@ -126,40 +126,40 @@ function play(playerItem) {                     //main game function
         switch(cpuIndex){
             case 0:
                 if(playerItem==1){
-                    bodyElement.style.border = "25px solid #44E179";
+                    bodyElement.style.border = "1.5vw solid #44E179";
                     document.getElementById("score-info").innerHTML ="YOU WON!";
                     playerScore++;
                 }
                 else{
-                    bodyElement.style.border = "25px solid #E14444";
-                    document.getElementById("score-info").innerHTML ="YOU LOST!";
+                  bodyElement.style.border = "1.5vw solid #E14444";
+                  document.getElementById("score-info").innerHTML ="YOU LOST!";
                     computerScore++;
 
                 }
                 break;
             case 1:
                 if(playerItem==2){
-                    bodyElement.style.border = "25px solid #44E179";
-                    document.getElementById("score-info").innerHTML ="YOU WON!";
+                  bodyElement.style.border = "1.5vw solid #44E179";
+                  document.getElementById("score-info").innerHTML ="YOU WON!";
                     playerScore++;
 
                 }
                 else{
-                    bodyElement.style.border = "25px solid #E14444";
-                    document.getElementById("score-info").innerHTML ="YOU LOST!";
+                  bodyElement.style.border = "1.5vw solid #E14444";
+                  document.getElementById("score-info").innerHTML ="YOU LOST!";
                     computerScore++;
 
                 }
                 break;
             case 2:
                 if(playerItem==0){
-                    bodyElement.style.border = "25px solid #44E179";
-                    document.getElementById("score-info").innerHTML ="YOU WON!";
+                  bodyElement.style.border = "1.5vw solid #44E179";
+                  document.getElementById("score-info").innerHTML ="YOU WON!";
                     playerScore++;
 
                 }
                 else{
-                    bodyElement.style.border = "25px solid #E14444";
+                    bodyElement.style.border = "1.5vw solid #E14444";
                     document.getElementById("score-info").innerHTML ="YOU LOST!";
                     computerScore++;
                 }
