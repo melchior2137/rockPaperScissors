@@ -125,6 +125,7 @@ button{
     background: #246A73;
     box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
     margin-bottom:5vh;
+    outline:none;
 }
 button:hover{
     background-color: white;
