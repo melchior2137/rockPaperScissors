@@ -19,6 +19,14 @@ imgArray[1].src = 'img/paper.png';
 imgArray[2] = new Image();
 imgArray[2].src = 'img/scissors.png';
 
+
+function resetScore(){
+    computerScore=0;
+    playerScore=0;
+    document.getElementById("score").innerHTML = playerScore + " : " + computerScore;
+}
+
+
 function cpuIndexGen(min, max) {                                 // Random CPU Item Generator
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the     minimum is inclusive
 }
